@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/*设计图width*/
+/*rem 份数*/
+/* 375/18.75 =20px=1rem */
+/*html rem比例*/
+.v-collapse {
+  display: none; }
+
+.v-collapse-parent {
+  margin: 10px 7px; }
+
+.v-collapse-item {
+  border: 1px solid #337ab7;
+  border-radius: 4px; }
+  .v-collapse-item + .v-collapse-item {
+    margin-top: 5px; }
+
+.v-collapse-btn a {
+  display: block;
+  padding: 7px 15px;
+  font-size: 16px;
+  color: #fff;
+  background: #337ab7;
+  text-decoration: none; }
+
+.v-collapse-content {
+  padding: 15px 15px; }

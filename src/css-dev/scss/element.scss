@@ -1,0 +1,30 @@
+
+/****************elementUI ***************/
+@import "../element-scss/all.scss";  
+
+  .element-box{
+	  padding: 15px;
+  }
+  .el-row+.el-row{
+  	margin-top: 15px;
+  	
+  }
+  
+  h4{
+	  margin-top: 30px;margin-bottom: 10px;
+  }
+  .hljs-keyword,
+   .hljs-selector-tag,
+   .hljs-title, 
+   .hljs-section, 
+  .hljs-built_in, 
+  .hljs-doctag,
+   .hljs-type, 
+  .hljs-tag, 
+  .hljs-name,
+   .hljs-selector-id,
+	.hljs-selector-class, 
+	.hljs-strong{
+		color:#3182bd;
+	}
+	

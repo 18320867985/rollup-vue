@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <title> Vue 开发和演示</title>
+    <link rel="stylesheet" type="text/css" href="css/iframe.css" />
+	<link rel="stylesheet" type="text/css" href="css/v-collapse.css"/>
+   
+</head>
+
+<body>
+<div class="iframe">
+	
+    <div class="top">
+        <h3>
+			<img src="./imgs/favicon.ico" alt="Alternate Text" /> 
+			Vue 开发和演示
+			<a  class="link-r" href="">go gitgub</a>
+		</h3>
+    </div>
+	
+    <div class="aside">
+        <div class="aside-pwr">
+          
+			<!-- accordion 大框 -->
+			<div class="v-collapse-parent accordion" >
+			
+			    <!--accordion 每一项 -->
+			    <div class="v-collapse-item">
+			
+			        <div class="v-collapse-btn">
+			            <a href="#v-collapse-a1" data-toggle="v-collapse">bootstrapUI</a>
+			        </div>
+			
+			        <!--v-collapse-->
+			        <div class="v-collapse v-collapse-content in" id="v-collapse-a1" data-parent=".accordion">
+			            <dl>
+			          
+			                <dd>
+			                    <a class="active" href="./html/form.html">选择按钮框</a>
+			                </dd>
+						
+			            </dl>
+			        </div>
+			    </div>
+			
+				<!--accordion 每一项 -->
+				<div class="v-collapse-item">
+							
+					<div class="v-collapse-btn">
+						<a href="#v-collapse-a3" data-toggle="v-collapse">elementUI</a>
+					</div>
+							
+					<!--v-collapse-->
+					<div class="v-collapse v-collapse-content" id="v-collapse-a3" data-parent=".accordion">
+						<dl>
+					  	
+							<dd>
+								<a class="" href="./html/element/layout.html">Layout 布局</a>
+							</dd>
+							<dd>
+								<a class="" href="./html/element/container.html">Container 布局容器</a>
+							</dd>
+							<dd>
+								<a class="" href="./html/element/btn.html">按钮组件</a>
+							</dd>
+							
+						</dl>
+					</div>
+				</div>
+									
+			</div>
+			
+        </div>
+
+    </div>
+   
+	<div class="cnt">
+        <iframe class="iframe-box active" src="./html/form.html" id="iframe" frameborder="0"></iframe>
+        <iframe class="iframe-box" id="iframe2" frameborder="0"></iframe>
+    </div>
+</div>	
+
+<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/v-collapse.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+		$(function () {
+		
+			$(".aside dl dd a").click(function (e) {
+				e.preventDefault();
+				$(".aside dl dd a").removeClass("active");
+				$(this).addClass("active");
+				var href = $(this).prop("href");
+		
+				if ($("#iframe").hasClass("active")) {
+					$("#iframe").removeClass("active");
+					$("#iframe2").addClass("active");
+				} else if ($("#iframe2").hasClass("active")) {
+					$("#iframe2").removeClass("active");
+					$("#iframe").addClass("active");
+				}
+		
+				$(".iframe-box.active").prop("src", href);
+			});
+		});
+</script>
+
+</body>
+
+</html>

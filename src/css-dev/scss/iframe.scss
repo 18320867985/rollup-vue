@@ -1,0 +1,141 @@
+
+
+@import "common/normalize.scss";  		 // reset css style 
+  
+@import "common/var.scss";      		 // variable   
+                                  			
+@import "common/df.scss";               //   default scss
+
+	html,
+	body {
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		min-width: 1440px;
+		background: #fff;
+	}
+
+.link-r {
+	float: right;
+	padding-right: 20px;
+	font-size: 16px;
+	
+}
+
+a:active {
+     color: $text-primary;
+}
+
+.iframe {
+	
+	height: 100%;
+	
+    .top {
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        padding-left: 40px;
+        background: #f2f2f2;
+        border-bottom: 1px solid #ddd;
+    }
+
+
+    .top h3 {
+        margin: 0;
+		color:$text-primary;
+        line-height: 60px;
+    }
+
+    .top img {
+        height: 40px;
+        margin-right: 20px;
+        vertical-align: middle;
+    }
+
+    .aside, .cnt {
+        padding-top: 60px;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .aside {
+		float: left;
+        width: 13%;
+        border-right: 1px solid #ddd;
+    }
+
+    .aside-pwr {
+        overflow: auto;
+        height: 100%;
+    }
+
+    .cnt {
+        overflow: hidden;
+    }
+
+    ul {
+        margin: 10px;
+        background: #ccc;
+    }
+
+    .iframe-box {
+        border: 0;
+        height: 100%;
+        width: 100%;
+        display: none;
+
+        &.active {
+            display: block;
+			
+            animation: index-iframe 1s both;
+        }
+    }
+
+    dl {
+        margin: 0;
+		
+    }
+
+    dt {
+        font-weight: 400;
+        font-size: 14px;
+        margin: 10px 0;
+    }
+
+    dd {
+        margin-left: 10px;
+       
+    }
+
+    dd + dd {
+        margin-top: 15px;
+    }
+
+    dd a,
+    dd a:link {
+		display: block;
+		font-size: 14px;
+        color: #333;
+        text-decoration: none;
+    }
+
+    dd a.active {
+        font-size: 16px;
+        color: $text-primary;
+		//transition:all .5s ease;
+    }
+}
+
+@keyframes index-iframe{
+    0% {
+        opacity: 0;
+        transform: translateX(50%) scale(.5);
+        
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+

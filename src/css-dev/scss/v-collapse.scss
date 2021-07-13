@@ -1,0 +1,37 @@
+@import  "./common/var.scss";
+
+$collapse-btncolor: #f2f2f2;
+$collapse-br:#ddd;
+
+.v-collapse {
+    display: none;
+}
+.v-collapse-parent {
+	margin: 10px 7px;
+}
+
+.v-collapse-item{
+
+    border:1px solid $text-primary;
+    border-radius: 4px;
+
+    &+&{
+        margin-top:5px;
+    }
+}
+
+.v-collapse-btn {
+
+    a {
+        display: block;
+        padding: 7px 15px;
+        font-size:16px;
+        color:#fff;
+        background: $text-primary;
+		text-decoration: none;
+    }
+}
+
+.v-collapse-content{
+     padding:15px 15px;
+}
